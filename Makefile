@@ -12,7 +12,7 @@ help: ## This help.
 
 # DOCKER TASKS
 build: ## build the project image.     
-	@docker build -t $(APP_IMAGE_NAME) --rm .\
+	@docker build -t $(APP_IMAGE_NAME) --rm --target $(APP_ENV) .\
         --build-arg NODE_VERSION=${NODE_VERSION} \
         
 
